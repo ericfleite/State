@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './App.css';
@@ -28,12 +28,12 @@ const listaTarefas = [
 function App() {
   const [tarefas, setTarefas] = useState(listaTarefas);
 
-  const concluirTarefa = (id: number) => {
+  const concluirTarefa = useCallback((id: number) => {
     const novasTarefas = tarefas.map((tarefa) =>
       tarefa.id === id ? { ...tarefa, concluida: true } : tarefa
     );
     setTarefas(novasTarefas);
-  };
+  }, [tarefas]);
 
   return (
     <>
