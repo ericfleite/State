@@ -13,6 +13,7 @@ function NomeUsuario() {
       <input type="text"
         placeholder="Digite seu nome"
         onChange={eventoDeOnChange}
+        /* onChange={(e) => setNome(e.target.value)} */
         value = {nome}
       />
     </div>
