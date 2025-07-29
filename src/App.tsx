@@ -5,21 +5,23 @@ import './App.css';
 import MostrarTexto from './components/MostrarTexto';
 import { Pai } from './components/AlteraTexto';
 import Tarefa from './components/Tarefa';
+import Input from './components/Input';
+import NomeUsuario from './components/NomeUsuario';
 
 const listaTarefas = [
   {
     id: 1,
-    titulo: "teste1",
+    titulo: "Trabalhar",
     concluida: false,
   },
   {
     id: 2,
-    titulo: "teste2",
+    titulo: "Dormir",
     concluida: false,
   },
   {
     id: 3,
-    titulo: "teste3",
+    titulo: "Estudar",
     concluida: false,
   },
 ];
@@ -51,6 +53,12 @@ function App() {
           onConcluir={() => concluirTarefa(tarefa.id)}
         />
       ))}
+      <br></br><br></br>
+      <h2>Teste de Aula onChange</h2>
+      <Input />
+      <br></br><br></br>
+      <h1>Exercício de Aula onChange</h1>
+      <NomeUsuario />
     </>
   );
 }
